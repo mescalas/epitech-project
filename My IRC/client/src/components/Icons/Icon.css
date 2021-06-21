@@ -1,0 +1,14 @@
+.icon {
+  width: 50px;
+  height: 50px;
+}
+.icon:hover {
+  cursor: pointer;
+}
+
+.iconContainer {
+  height: 60%;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: 25px;
+}

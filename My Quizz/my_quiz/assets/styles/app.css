@@ -1,0 +1,28 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+@responsive {
+.animation {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.animation::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.animation:hover::after {
+    width: 100%;
+}
+}

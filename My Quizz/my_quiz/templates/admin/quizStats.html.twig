@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ quiz.name }} stats {% endblock %}
+
+{% block body %}
+
+<p>Creator</p>
+{{ creator }}
+
+    {% if lowestScore is defined and lowestScore is not null %}
+
+        <p>Worst Score</p>
+        {{ lowestScore.score}} 
+        <p>Best Score</p>
+        {{ highestScore.score}}
+        <p>Number of quiz done</p>
+        {{ numberQuizDone|length }}
+
+    {% else %}
+
+        <p>Nobody did this quiz</p>
+
+    {% endif %}
+
+
+
+
+{% endblock %}

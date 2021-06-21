@@ -1,0 +1,6 @@
+{{ form_start(form) }}
+                {{ form_row(form.name, {'attr' : {'class':'border border-gray-300'}}) }}
+                {{ form_row(form.categorie, {'attr' : {'class':'border border-gray-300'}}) }}
+                {{ form_row(form.number, {'attr' : {'class':'border border-gray-300'}}) }}
+<button class=" ml-12 mt-4 p-0.5 rounded-lg border border-gray-400 bg-gradient-to-b from-white to-gray-200">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

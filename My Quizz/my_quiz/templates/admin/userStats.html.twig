@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ user.pseudo }} stats {% endblock %}
+
+{% block body %}
+
+{% if lowestScore is defined and lowestScore is not null %}
+
+<p>Worst Score</p>
+<span>{{ lowestScore.quiz.name }} : </span>{{ lowestScore.score}} 
+<p>Best Score</p>
+<span>{{ highestScore.quiz.name }} : </span>{{ highestScore.score}}
+<p>Average Score</p>
+{{ avgScore.1 }}
+<p>Number of quiz done</p>
+{{ numberOfQuiz|length }}
+
+{% else %}
+
+<p>{{ user.pseudo }} didn't do any quiz</p>
+
+{% endif %}
+
+<p>Last time connected</p>
+{{ lastTimeConnected|date('d-m-Y H:i:s') }}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ quizName }} {% endblock %}
+
+{% block body %}
+
+<h1> {{ result }} </h1>
+
+<h2> {{ score }}/{{ numberOfQuestions }} </h2>
+
+<a href="{{ path('default') }}"><button type="button"> Home </button></a>
+{% endblock %}

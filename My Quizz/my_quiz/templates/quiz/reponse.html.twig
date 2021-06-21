@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ quizName }} {% endblock %}
+
+{% block body %}
+
+<h1> {{ result }} </h1>
+
+<h2> {{ score }}/{{ numberOfQuestions }} </h2>
+
+<a href="{{ url('answerQuestion', {id_quiz: id_quiz, id_question: id_question + 1}) }}"><button type="button"> Next question </button></a>
+{% endblock %}

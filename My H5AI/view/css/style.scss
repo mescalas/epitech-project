@@ -1,0 +1,155 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.column {
+	display: flex;
+}
+
+.left {
+	width: 20%;
+	height: 100vh;
+	float: left;
+	border-right: 1px solid black;
+}
+
+.right {
+	width: 79%;
+	height: 100vh;
+	float: right;
+	display: flex;
+	flex-direction: column;
+}
+
+#tree {
+	margin: 20px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.wrapper1 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin: 5px;
+}
+
+.folder {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+li {
+	list-style: none;
+}
+
+.file {
+	margin: 3px;
+}
+
+.file_size {
+	margin: 3px;
+}
+
+.file_modification  {
+	margin: 3px;
+}
+
+.folder_icon {
+	background-image: url('../css/assets/1200px-OneDrive_Folder_Icon.svg.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.txt_icon {
+	background-image: url('../css/assets/txt.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.pdf_icon {
+	background-image: url('../css/assets/pdf.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.img_icon {
+	background-image: url('../css/assets/image.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+
+.subfolders {
+	margin-left: 30px;
+}
+
+.folder,
+.subfolders {
+	padding: 3px;
+}
+
+.folder,
+.subfolders :hover {
+	cursor: pointer;
+}
+#button {
+	margin: 10px 0 10px 20px;
+	button {
+		margin-left: 10px;
+	}
+}
+#wrapper3 {
+	margin: 20px 0 0 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	#container {
+		width: 950px;
+
+		#vide {
+			font-size: 70px;
+		}
+	}
+
+	.taille {
+		width: 150px;
+	}
+}
+
+.modif {
+	float: right;
+	.file_modification {
+		margin: 3px;
+	}
+}
+
+.modal-title {
+	width: 500px;
+}
+
+#related_path {
+	margin: 20px 0 0 20px;
+}
+/*# sourceMappingURL=style.css.map */

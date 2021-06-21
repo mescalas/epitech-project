@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quiz{% endblock %}
+
+{% block body %}
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>{{ quiz.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {{ include('quiz/_delete_form.html.twig') }}
+
+{% endblock %}

@@ -1,0 +1,9 @@
+<h3>You did it! Welcome to my_quizz!</h3>
+
+Hi {{ pseudo }}! You're succesfully registered.
+
+<h1>You need to activate your account!</h1>
+    <p>Click on the link below</p>
+    <p><a href="{{ absolute_url(path('activation', {'token': token})) }}">Activate my account</a></p>
+
+Thanks!

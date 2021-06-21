@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ quizName }} {% endblock %}
+
+{% block body %}
+
+<h1> Question {{ questionNumber }}/{{ numberOfQuestions }}</h1>
+
+<p>{{ question }}</p>
+
+{{ form_start(form) }}
+
+{{ form_label(form.reponse, null, {
+    'label': 'Reponses :',
+    'label_attr': {'class': 'foo'}
+}) }}
+
+{{ form_widget(form.reponse, {'attr': {'class': 'foo'}}) }}
+
+{{ form_row(form.submit, {'attr': {'class': 'foo'}}) }}
+
+
+{{ form_end(form) }}
+
+{% endblock %}
