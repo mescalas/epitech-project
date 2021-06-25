@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script_POO.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>Puissance_4</title>
+    </head>
+    <body>
+        <div class="wrapper1">
+            <h1>PUISSANCE 4 !</h1>
+            <h2>Réglages d'avant partie :</h2>
+            <div id="menu">
+                <h3>Nombre de ligne :</h3>
+                <input type="number" min="4" id="nbrLigne" value="6" />
+                <h3>Nombre de colone :</h3>
+                <input type="number" min="4" id="nbrColone" value="7" />
+                <h3 class="titre">PSEUDO JOUEUR 1</h3>
+                <input type="text" id="pseudo1"/>
+                <p>Couleur des jetons :</p>
+                <select id="couleurJetonsJ1">
+                    <option value="red">Rouge</option>
+                    <option value="yellow">Jaune</option>
+                    <option value="purple">Violet</option>
+                    <option value="green">Vert</option>
+                    <option value="orange">Orange</option>
+                    <option value="blue">Bleu</option>
+                </select>
+                <h3 class="titre">PSEUDO JOUEUR 2</h3>
+                <input type="text" id="pseudo2"/>
+                <p>Couleur des jetons :</p>
+                <select id="couleurJetonsJ2">
+                    <option value="red">Rouge</option>
+                    <option value="yellow">Jaune</option>
+                    <option value="purple">Violet</option>
+                    <option value="green">Vert</option>
+                    <option value="orange">Orange</option>
+                    <option value="blue">Bleu</option>
+                </select>
+            </div>
+            <input type="submit" value="Commencer une partie" id="start" />
+        </div>
+    </body>
+</html>
