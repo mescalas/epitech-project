@@ -1,0 +1,293 @@
+register:
+    path: /register
+    controller: App\Controller\AuthController::register
+    methods: POST
+
+api_login_check:
+    path: /api/login_check
+    controller: App\Controller\AuthController::getTokenUser
+
+admin:
+    path: /api/admin
+    controller: App\Controller\AdminController::index
+
+    # ---------- PRODUIT ----------
+
+product_list:
+    path: /product
+    controller: App\Controller\ProductController::findAllProduct
+    methods: GET
+
+product_create:
+    path: /api/product
+    controller: App\Controller\ProductController::createProduct
+    methods: POST
+
+product_edit:
+    path: /api/product
+    controller: App\Controller\ProductController::updateProduct
+    methods: PUT
+
+product_filter:
+    path: /product/filter
+    controller: App\Controller\ProductController::filterProduct
+    methods: POST
+
+product_read:
+    path: /product/{id}
+    controller: App\Controller\ProductController::readProduct
+    methods: GET
+
+product_image:
+    path: /media/product/{image}
+    controller: App\Controller\ProductController::returnProductImage
+    methods: GET
+
+product_delete:
+    path: /api/product
+    controller: App\Controller\ProductController::deleteProduct
+    methods: DELETE
+
+    # ---------- UTILISATEUR ----------
+
+user_list:
+    path: /api/user
+    controller: App\Controller\UserController::findAllUser
+    methods: GET
+
+user_update:
+    path: /api/user
+    controller: App\Controller\UserController::UpdateUser
+    methods: PUT
+
+user_read:
+    path: /api/user/{id}
+    controller: App\Controller\UserController::readUser
+    methods: GET
+
+user_delete:
+    path: /api/user
+    controller: App\Controller\UserController::deleteUser
+    methods: DELETE
+
+    # ---------- CATÉGORIE ----------
+
+category_list:
+    path: /category
+    controller: App\Controller\CategoryController::findAllCategory
+    methods: GET
+
+category_create:
+    path: /api/category
+    controller: App\Controller\CategoryController::createCategory
+    methods: POST
+
+category_update:
+    path: /api/category
+    controller: App\Controller\CategoryController::updateCategory
+    methods: PUT
+
+category_read:
+    path: /category/{id}
+    controller: App\Controller\CategoryController::readCategory
+    methods: GET
+
+category_delete:
+    path: /api/category
+    controller: App\Controller\CategoryController::deleteCategory
+    methods: DELETE
+
+    # ---------- SOUS-CATÉGORIE ----------
+
+subcategory_list:
+    path: /subcategory
+    controller: App\Controller\SubCategoryController::findAllSubCategory
+    methods: GET
+
+subcategory_create:
+    path: /api/subcategory
+    controller: App\Controller\SubCategoryController::createSubCategory
+    methods: POST
+
+subcategory_update:
+    path: /api/subcategory
+    controller: App\Controller\SubCategoryController::updateSubCategory
+    methods: PUT
+
+subcategory_read:
+    path: /subcategory/{id}
+    controller: App\Controller\SubCategoryController::readSubCategory
+    methods: GET
+
+subcategory_delete:
+    path: /api/subcategory
+    controller: App\Controller\SubCategoryController::deleteSubCategory
+    methods:
+        DELETE
+
+        # ---------- ADDRESSE ----------
+
+address_create:
+    path: /address
+    controller: App\Controller\AddressController::createAddress
+    methods: POST
+
+address_update:
+    path: /api/address
+    controller: App\Controller\AddressController::updateAddress
+    methods: PUT
+
+address_delete:
+    path: /api/address
+    controller: App\Controller\AddressController::deleteAddress
+    methods: DELETE
+
+address_user:
+    path: /api/address/user/{email}
+    controller: App\Controller\AddressController::getAddressByUser
+    methods: GET
+
+address_read:
+    path: /address/{id}
+    controller: App\Controller\AddressController::readAddress
+    methods: GET
+
+# ---------- ORDER ----------
+
+order_create:
+    path: /order
+    controller: App\Controller\OrderController::createOrder
+    methods: POST
+
+order_read:
+    path: /order/{ref}
+    controller: App\Controller\OrderController::readOrder
+    methods: GET
+
+order_delete:
+    path: /order
+    controller: App\Controller\OrderController::deleteOrder
+    methods: DELETE
+
+order_user:
+    path: /order/user/{email}
+    controller: App\Controller\OrderController::getOrderbyUser
+    methods: GET
+
+orderItem_create:
+    path: /orderItem
+    controller: App\Controller\OrderItemController::createOrderItem
+    methods: POST
+
+orderItem_read:
+    path: /orderItem/{id}
+    controller: App\Controller\OrderItemController::readOrderItem
+    methods: GET
+
+orderItem_delete:
+    path: /orderItem
+    controller: App\Controller\OrderItemController::deleteOrderItem
+    methods: DELETE
+
+# ---------- MOYEN DE PAIEMENT ----------
+
+payment_method_create:
+    path: api/payment_method
+    controller: App\Controller\PaymentMethodController::createPaymentMethod
+    methods: POST
+
+payment_method_update:
+    path: /api/payment_method
+    controller: App\Controller\PaymentMethodController::updatePaymentMethod
+    methods: PUT
+
+payment_method_delete:
+    path: /api/payment_method
+    controller: App\Controller\PaymentMethodController::deletePaymentMethod
+    methods: DELETE
+
+payment_method_user:
+    path: /api/payment_method/user/{email}
+    controller: App\Controller\PaymentMethodController::getPaymentMethodByUser
+    methods: GET
+
+payment_method_read:
+    path: /api/payment_method/{id}
+    controller: App\Controller\PaymentMethodController::readPaymentMethod
+    methods: GET
+
+    # ---------- FRAIS DE PORT ----------
+
+shipping_create:
+    path: /api/shipping
+    controller: App\Controller\ShippingController::createShipping
+    methods: POST
+
+shipping_update:
+    path: /api/shipping
+    controller: App\Controller\ShippingController::updateShipping
+    methods: PUT
+
+shipping_delete:
+    path: /api/shipping
+    controller: App\Controller\ShippingController::deleteShipping
+    methods: DELETE
+
+shipping_check:
+    path: /shipping
+    controller: App\Controller\ShippingController::checkShipping
+    methods: GET
+
+    # ---------- AVIS ----------
+
+review_check:
+    path: /api/review
+    controller: App\Controller\ReviewController::checkIfUserCanReview
+    methods: GET
+
+review_create:
+    path: /api/review
+    controller: App\Controller\ReviewController::createReview
+    methods: POST
+
+    # ---------- AUTRE ROUTE ----------
+
+stock_update:
+    path: /api/stock
+    controller: App\Controller\StockController::updateStock
+    methods: PUT
+
+featured_product:
+    path: /featured
+    controller: App\Controller\ProductController::findFeatured
+    methods: GET
+
+product_add_featured:
+    path: /api/featured
+    controller: App\Controller\ProductController::addFeaturedProduct
+    methods: POST
+
+product_remove_featured:
+    path: /api/featured
+    controller: App\Controller\ProductController::removeFeaturedProduct
+    methods: DELETE
+
+product_discount:
+    path: /api/discount
+    controller: App\Controller\ProductController::updateDiscount
+    methods: PUT
+
+subcategory_brand:
+    path: /brand
+    controller: App\Controller\SubCategoryController::getBrand
+    methods: POST
+
+product_image_add:
+    path: /api/product/image
+    controller: App\Controller\ProductImageController::addProductImage
+    methods: POST
+
+product_image_delete:
+    path: /api/product/image
+    controller: App\Controller\ProductImageController::deleteProductImage
+    methods: DELETE
